@@ -15,7 +15,7 @@
     - name: Print URL 
       vars: 
         URL: task.google.com
-      ansible.built.debug:
+      ansible.builtin.debug:
          msg: "{{ URL }}"
 
 - name: Role variables
