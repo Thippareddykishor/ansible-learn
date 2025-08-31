@@ -4,4 +4,4 @@
   tasks:
     - name: print
       ansible.builtin.debug:
-        msg: "  {{ username }} "
+        msg: "{{ lookup('community.hashi_vault.hashi_vault', secret=test/demo:username token={{ vault_token}} url=http://vault-internal.kommanuthala.store:8200') }} "
