@@ -1,0 +1,7 @@
+- name: get secrets
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: print
+      ansible.builtin.debug:
+        msg: "  {{ username }} "
