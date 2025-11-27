@@ -1,0 +1,12 @@
+- name: Tags
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: shell
+      ansible.builtin.debug: cat /etc/passwd | grep john
+      register: out
+
+    - name: print
+      ansible.builtin.debug:
+        msg: john user not present
+      when: out.stdout = ""

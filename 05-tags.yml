@@ -9,6 +9,8 @@
     - name: print veg
       ansible.builtin.debug:
         msg: "veg"
-      tags: veg
-      
+      tags: 
+        - veg
+        - vegs
+
 #ansible-playbook 5* -t fruit
